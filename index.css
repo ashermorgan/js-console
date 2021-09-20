@@ -84,6 +84,12 @@ noscript {
     overflow-y: scroll;
 }
 
+/* 404 page */
+#error {
+    margin-top: 10px;
+    text-align: center;
+}
+
 /* app theme */
 body, textarea, button {
     color: var(--nord4);
@@ -111,6 +117,9 @@ button:active, button:focus {
 }
 noscript {
     color: var(--nord11);
+}
+a {
+    color: var(--nord10);
 }
 
 /* mobile styles */
