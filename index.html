@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>JS Console</title>
+
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
+    <body onload="initializeApp()">
+        <header>
+            <h1>JS Console</h1>
+        </header>
+
+        <main>
+            <noscript>
+                JS Console doesn't work without JavaScript enabled. Please enable it to continue.
+            </noscript>
+
+            <h2>
+                JavaScript Code:
+            </h2>
+            <textarea id="input" autocomplete="off" spellcheck="false" autocorrect="off"></textarea>
+            <div id="controls">
+                <button id="clearButton" onclick="console.clear()">Clear Console</button>
+                <button id="executeButton" onclick="execute()">Execute</button>
+            </div>
+
+            <h2>
+                Output:
+            </h2>
+            <code id="output"></code>
+        </main>
+    </body>
+</html>
