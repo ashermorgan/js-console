@@ -1,0 +1,41 @@
+{
+    "background_color": "#ebcb8b",
+    "categories": ["utilities"],
+    "description": "Execute JavaScript code inside your browser even if the browser console is unavailable",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "img/favicon-32x32.png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "img/favicon-180x180.png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "img/favicon-192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/favicon-192x192-maskable.png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "img/favicon-512x512.png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "img/favicon-512x512-maskable.png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ],
+    "lang": "en-US",
+    "name": "JS Console",
+    "orientation": "portrait",
+    "scope": "./",
+    "short_name": "JS Console",
+    "start_url": "./index.html",
+    "theme_color": "#ebcb8b"
+}
