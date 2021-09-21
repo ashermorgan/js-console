@@ -103,13 +103,12 @@ function execute() {
     try {
         // Execute the code
         const result = eval(input);
-        if (result !== undefined || ignoreUndefinedResults == false) {
+        if (result !== undefined || ignoreUndefinedResults === false) {
             appendOutput(`${result}\n`);
         }
     }
     catch (e) {
         // Print errors
-        appendOutput(`${e}\n`);
         console.error(e);
     }
 
