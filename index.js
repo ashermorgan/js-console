@@ -79,7 +79,7 @@ console.error = (...args) => {
  * The new console.clear method
  */
 console.clear = () => {
-    document.getElementById('output').innerText = "";
+    document.getElementById('output').innerText = '';
     document.getElementById('clearButton').blur();
     appendOutput('Console was cleared.\n');
     oldConsole.clear();
@@ -90,7 +90,8 @@ console.clear = () => {
  * Execute the JavaScript code
  */
 function execute() {
-    // Blur execute button
+    // Blur textarea and execute button
+    document.getElementById('input').blur();
     document.getElementById('executeButton').blur();
 
     // Reset ignoreUndefinedResults flag
@@ -118,6 +119,17 @@ function execute() {
 }
 
 /**
+ * Respond to a keydown event in the textarea
+ * @param {Object} e The event args
+ */
+function inputKeydown(e) {
+    if (e.keyCode === 13 && !e.shiftKey) {
+        e.preventDefault();
+        execute();
+    }
+}
+
+/**
  * Append a value to the app console
  * @param {String} value The value
  */
@@ -130,5 +142,6 @@ function appendOutput(value) {
  */
 function initializeApp() {
     document.getElementById('input').value = `console.log('Hello World!');`;
-    document.getElementById('output').innerText = "";
+    document.getElementById('output').innerText = '';
+    document.getElementById('input').addEventListener('keydown', inputKeydown);
 }
