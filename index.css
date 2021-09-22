@@ -25,6 +25,10 @@
     transition-duration: 0.1s;
     box-sizing: border-box;
 }
+html, body {
+    width: 100%;
+    height: 100%;
+}
 body {
     font-family: Segoe UI, sans-serif;
     touch-action: manipulation;
@@ -46,7 +50,7 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 5px;
 }
-* + h2 {
+*:not(noscript) + h2 {
     margin-top: 15px;
 }
 
@@ -64,7 +68,6 @@ h1 {
 /* app contents */
 main {
     max-width: 1000px;
-    min-height: 500px;
     margin: auto;
     padding: 16px;
     display: flex;
@@ -129,5 +132,15 @@ a {
     }
     textarea {
         height: 150px;
+    }
+}
+@media only screen and (max-height: 900px) {
+    main {
+        min-height: calc(100% - 64px);
+    }
+    #output {
+        height: auto;
+        min-height: 50px;
+        overflow-y: unset;
     }
 }
